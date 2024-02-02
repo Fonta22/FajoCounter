@@ -1,8 +1,6 @@
-import Inputs from './components/Inputs';
 import './App.css';
-import Euro from './X.png';
-import Money from './50.jpg';
 import { useState } from 'react';
+import Inputs from './components/Inputs';
 
 export const amounts: number[] =  [ 5, 10, 20, 50, 100, 200, 500 ];
 
@@ -41,7 +39,7 @@ function App() {
       <nav className="navbar bg-body-tertiary">
         <div className="container">
           <a className="navbar-brand" href="#">
-            <img src={Euro} alt="Euro" height="24" />
+            <img src="/img/flag_eu.png" alt="European Union Flag" height="24" />
             &nbsp;
             FajoCounter&#8482;
           </a>
@@ -58,7 +56,7 @@ function App() {
                 <Inputs callback={handleInput} />
               </td>
               <td style={{ height: 365, width: '100%', textAlign: 'center' }}>
-                <img className="inputs-img mb-3 shadow" src={Money} alt="img" />
+                <img className="inputs-img mb-3 shadow" src="/img/bills_50.jpg" alt="50 € bills" />
               </td>
             </tr>
           </tbody>

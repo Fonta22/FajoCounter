@@ -13,19 +13,6 @@ const currency: Currency = {
     symbol: '€',
 }
 
-//const amounts: number[] = [ 5, 10, 20, 50, 100, 200, 500 ];
-/*const amounts = {
-    b5:   { value: 5,   n: 0 },
-    b10:  { value: 10,  n: 0 },
-    b20:  { value: 20,  n: 0 },
-    b50:  { value: 50,  n: 0 },
-    b100: { value: 100, n: 0 },
-    b200: { value: 200, n: 0 },
-    b500: { value: 500, n: 0 },
-}*/
-
-
-
 interface InputProps {
     symbol: string;
     amount: number;
