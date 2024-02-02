@@ -1,4 +1,3 @@
-import './App.css';
 import { useState } from 'react';
 import Inputs from './components/Inputs';
 
@@ -42,6 +41,10 @@ function App() {
             <img src="/img/flag_eu.png" alt="European Union Flag" height="24" />
             &nbsp;
             FajoCounter&#8482;
+            <span className="navbar-text">
+              &nbsp;&nbsp;|&nbsp;
+              Count your racks efficiently
+            </span>
           </a>
         </div>
       </nav>

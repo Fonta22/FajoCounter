@@ -31,7 +31,8 @@ function Input({ symbol, amount, index, callback }: InputProps): ReactElement {
                 onChange={e => callback(parseInt(e.target.value), index)}
                 min={0}
                 step={1}
-                placeholder={`${amount} ${symbol} bills amount`}
+                placeholder="Amount"
+                //placeholder={`${amount} ${symbol} bills amount`}
                 className="form-control amount-input"
                 aria-label="Money amount"
             />
