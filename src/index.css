@@ -1,3 +1,12 @@
+td {
+  height: 365px;
+}
+
+#td-img {
+  width: 100%;
+  text-align: center;
+}
+
 .inputs-container {
   width: 30rem;
 }
@@ -10,4 +19,16 @@
 
 .navbar-text {
   font-size: 1rem !important;
+}
+
+.total {
+  font-size: 50px;
+}
+
+.bill-value {
+  width: 4rem;
+}
+
+.non-draggable {
+  pointer-events: none;
 }

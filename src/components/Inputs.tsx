@@ -1,4 +1,5 @@
-import { ReactElement, useState } from "react";
+import { ReactElement } from "react";
+import { isMobile } from 'react-device-detect';
 import { amounts } from "../App";
 
 interface Currency {
@@ -23,7 +24,7 @@ interface InputProps {
 function Input({ symbol, amount, index, callback }: InputProps): ReactElement {
     return (
         <div className="input-group mb-3 shadow">
-            <span className="input-group-text" style={{ width: '4rem' }}>{amount}</span>
+            <span className="input-group-text bill-value">{amount}</span>
             <span className="input-group-text"><code>{symbol}</code></span>
             
             <input
@@ -42,7 +43,7 @@ function Input({ symbol, amount, index, callback }: InputProps): ReactElement {
 
 function Inputs({ callback }: { callback: (value: number, index: number) => void }): ReactElement {
     return (
-        <div className="inputs-container">
+        <div className={isMobile ? "mt-4" : "inputs-container"}>
             {amounts.map((amn, i) => {
                 return <Input
                     symbol={currency.symbol}
