@@ -37,7 +37,7 @@ function App(): ReactElement {
           <a className="navbar-brand" href="#">
             <img src="/img/flag_eu.png" alt="European Union Flag" height="24" />
             &nbsp;
-            FajoCounter&#8482;
+            FajoCounter&trade;
             {isMobile ?
               <></>
               :
@@ -55,7 +55,7 @@ function App(): ReactElement {
           <Inputs callback={handleInput} />
           :
           <>
-            <h1 className="my-4">FajoCounter&#8482;</h1>
+            <h1 className="my-4">FajoCounter&trade;</h1>
             <table>
             <tbody>
               <tr>
