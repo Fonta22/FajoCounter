@@ -1,5 +1,5 @@
 ```jsx
-import { useState } from 'react';
+import { useState } from "react";
 
 let initialCounters = [
   0, 0, 0
@@ -16,7 +16,7 @@ export default function CounterList() {
         // Increment the clicked counter
         return c + 1;
       } else {
-        // The rest haven't changed
+        // The rest haven"t changed
         return c;
       }
     });

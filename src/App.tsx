@@ -1,13 +1,17 @@
-import { useState } from 'react';
-import Inputs from './components/Inputs';
-import { isMobile } from 'react-device-detect';
+// libraries
+import { ReactElement, useState } from "react";
+import { isMobile } from "react-device-detect";
+// types
+import { Amounts } from "./typings";
+// components
+import Inputs from "./components/Inputs";
 
-export const amounts: number[] =  [ 5, 10, 20, 50, 100, 200, 500 ];
+export const amounts: Amounts =  [ 5, 10, 20, 50, 100, 200, 500 ];
 
-function App() {
+function App(): ReactElement {
   const [total, setTotal] = useState(0);
 
-  let initialValues: number[] = [
+  let initialValues: Amounts = [
     0, 0, 0, 0, 0, 0, 0
   ];
 
@@ -16,12 +20,11 @@ function App() {
   const handleInput = (value: number, index: number): void => {
     if (Number.isNaN(value)) value = 0;
     values[index] = value;
-    console.log(values);
   }
 
-  const handleSubmit = () => {
-    let sum = 0;
-    values.map((value, i) => {
+  const handleSubmit = (): void => {
+    let sum: number = 0;
+    values.map((value: number, i: number) => {
       sum += value * amounts[i];
     });
     setTotal(sum);
@@ -67,15 +70,14 @@ function App() {
           </table>
          </>
         }
-        
 
-        <button className='btn btn-light mt-2 me-2 shadow' onClick={handleSubmit}>Count Fajo</button>
-        <button className='btn btn-danger mt-2 shadow' /*onClick={resetInputs}*/>Reset</button>
+        <button className="btn btn-light mt-2 me-2 shadow" onClick={handleSubmit}>Count Fajo</button>
+        <button className="btn btn-danger mt-2 shadow" /*onClick={resetInputs}*/>Reset</button>
         <br />
         <br />
 
-        <pre className='total'>
-          {total.toLocaleString('de')},00 €
+        <pre className="total">
+          {total.toLocaleString("de")},00 €
         </pre>
       </div>
     </div>
